@@ -2,7 +2,109 @@
 ## Wolf Devs Esport Tournament
 
 <p align="justify">
-Chicos, en la branch darold01, está al día con el push de Juan de anoche (game.schema.ts) y quedó el proyecto con la conexión a base de dato establecida, operando un crud básico sobre torneo.schema, para hacer pruebas, comiencen con el comando  "npm run start:dev" luego usando thunder, postman o similar, coloquen el path http://localhost:5800/torneo, donde podrán probar el crud y ver en la base de datos los resultados.
+CRUD esta verificado.
+
+rutas:
+
+para user sería:
+
+find all => https://test-back-torneo-1.onrender.com/user
+
+find one => https://test-back-torneo-1.onrender.com/user/654134c5b2647a3ae2184f79 (user/id)
+
+Post => https://test-back-torneo-1.onrender.com/user
+en el body, usar json o raw, un ejemplo de estructura seria:
+
+ejemplo 1 - 
+
+{
+  "name": "Jane Smith",
+  "password": "password456",
+  "email": "jane.smith@example.com",
+  "birth": "1995-05-15",
+  "profiles": [
+    {
+      "userName": "janesmith",
+      "description": "I love hiking and photography.",
+      "avatar": "https://example.com/avatar.jpg",
+      "favorites": ["Game 3", "Game 4"],
+      "socialNetworks": [
+        {
+          "name": "Instagram",
+          "url": "https://instagram.com/janesmith"
+        },
+        {
+          "name": "Facebook",
+          "url": "https://facebook.com/janesmith"
+        }
+      ]
+    }
+  ]
+}
+
+ejemplo 2 -
+
+{
+  "name": "Robert Johnson",
+  "password": "password789",
+  "email": "robert.johnson@example.com",
+  "birth": "1985-08-10",
+  "profiles": [
+    {
+      "userName": "robertjohnson",
+      "description": "I'm a music enthusiast.",
+      "avatar": "https://example.com/avatar.jpg",
+      "favorites": ["Game 5", "Game 6"],
+      "socialNetworks": [
+        {
+          "name": "YouTube",
+          "url": "https://youtube.com/robertjohnson"
+        },
+        {
+          "name": "SoundCloud",
+          "url": "https://soundcloud.com/robertjohnson"
+        }
+      ]
+    }
+  ]
+}
+
+ejemplo 3 -
+
+{
+  "name": "Emily Davis",
+  "password": "passwordabc",
+  "email": "emily.davis@example.com",
+  "birth": "1992-12-20",
+  "profiles": [
+    {
+      "userName": "emilydavis",
+      "description": "I'm a travel blogger.",
+      "avatar": "https://example.com/avatar.jpg",
+      "favorites": ["Game 7", "Game 8"],
+      "socialNetworks": [
+        {
+          "name": "Blog",
+          "url": "https://emilydavis.com/"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://instagram.com/emilydavis"
+        }
+      ]
+    }
+  ]
+}
+
+Delete => https://test-back-torneo-1.onrender.com/user/654134c5b2647a3ae2184f79 (user/id)
+
+Put => https://test-back-torneo-1.onrender.com/user/654134ccb2647a3ae2184f7d user/id y en el body usar json o raw, luego colocar el atributo que deseamos cambiar, un ejemplo seria:
+
+{
+"name": "Jonny 100"
+}
+
+el formato de ruta se repite con torneo, game y historia, la estrura de los datos para la creacion y la modificacion, la pueden ver en los schemas.
 </p>
 
 <p align="justify">
